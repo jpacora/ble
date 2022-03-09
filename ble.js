@@ -44,9 +44,6 @@ function sendTextData(qrdata) {
 function bleprint(barcode) {
     if (printCharacteristic == null) {
     navigator.bluetooth.requestDevice({
-        filters: [{
-        namePrefix: 'SP'
-        }],
         optionalServices: ['49535343-fe7d-4ae5-8fa9-9fafd205e455']
     })
     .then(device => {
